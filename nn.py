@@ -66,8 +66,8 @@ class BN(Module):
         """
         without running mean / var
         """
-        self.beta = Tensor(np.zeros(dim))
-        self.gamma = Tensor(np.ones(dim))
+        self.beta = Tensor(np.zeros((1, dim)))
+        self.gamma = Tensor(np.ones((1, dim)))
         self.epsilon = epsilon
 
     def __call__(self, x):
